@@ -1,0 +1,11 @@
+[package]
+name = "macros"
+version.workspace = true
+edition.workspace = true
+
+[lib]
+proc-macro = true # 声明为过程宏箱
+
+[dependencies]
+syn = "2.0.100" # 用于解析 Rust 代码
+quote = "1.0.40" # 用于生成 Rust 代码

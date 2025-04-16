@@ -1,0 +1,35 @@
+# 该文件是 cargo 的配置文件
+
+# cargo build 构建项目
+# cargo run 构建项目同时运行
+# -p package_a 命令只对 package_a 生效
+
+# 包(package) 箱(crate) 模块(module)
+# 箱是 Rust 编译的最小单位，可以是一个可执行文件 main.rs，也可以是一个库文件 lib.rs，箱中包含代码和模块
+# 一个完整的 Rust 项目就是一个包，由 Cargo.toml 进行配置管理，包中包含多个箱
+
+# 一个工作空间(workspace)由可以由一个或多个包组成
+[workspace]
+members = [
+  "lang", "module", "macros",
+  "exercise/minigrep"
+]
+# 让 Rust 使用新的依赖解析方式，更加智能
+resolver = "2"
+
+# 统一管理包
+[workspace.package]
+version = "1.0.0"
+edition = "2024"
+license = "Apache-2.0" # 指定一个 license
+license-file = "LICENSE.txt" # 或者指定一个 license 文件
+
+[workspace.dependencies]
+module = { path = "module" }
+trpl = "0.2"
+
+[profile.dev] # 配置 dev 环境
+opt-level = 0 # 优化等级，等级越高编译时间越慢
+
+[profile.release] # 配置 release 环境
+opt-level = 3

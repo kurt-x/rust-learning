@@ -1,0 +1,65 @@
+[package]
+name = "lang"
+version.workspace = true
+edition.workspace = true
+
+[[bin]]
+name = "collection"
+path = "collection.rs"
+
+[[bin]]
+name = "comment"
+path = "comment.rs"
+
+[[bin]]
+name = "control"
+path = "control.rs"
+
+[[bin]]
+name = "data"
+path = "data.rs"
+
+[[bin]]
+name = "error"
+path = "error.rs"
+
+[[bin]]
+name = "function"
+path = "function.rs"
+
+[[bin]]
+name = "macro"
+path = "macro.rs"
+
+[[bin]]
+name = "ownership"
+path = "ownership.rs"
+
+[[bin]]
+name = "sptr"
+path = "smart_pointer.rs"
+
+[[bin]]
+name = "struct"
+path = "struct.rs"
+
+[[bin]]
+name = "sync"
+path = "sync.rs"
+
+[[bin]]
+name = "thread"
+path = "thread.rs"
+
+[[bin]]
+name = "type"
+path = "type.rs"
+
+[[bin]]
+name = "unsafe"
+path = "unsafe_code.rs"
+
+[dependencies]
+module.workspace = true
+trpl.workspace = true
+macros = { path = "../macros" }
