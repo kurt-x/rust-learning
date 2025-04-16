@@ -10,10 +10,7 @@
 
 # 一个工作空间(workspace)由可以由一个或多个包组成
 [workspace]
-members = [
-  "lang", "module", "macros",
-  "exercise/minigrep"
-]
+members = ["lang", "module", "macros",]
 # 让 Rust 使用新的依赖解析方式，更加智能
 resolver = "2"
 
