@@ -27,7 +27,7 @@ fn main()
     let x = Rc::clone(&data);
     let y = Rc::clone(&data);
     let z = Rc::clone(&data);
-    let w = Rc::downgrade(&data); // 创建弱引用
+    let _w = Rc::downgrade(&data); // 创建弱引用
     dbg!(Rc::strong_count(&data));
     dbg!(Rc::weak_count(&data));
     dbg!(x, y, z);

@@ -1,5 +1,3 @@
-#![allow(unused_variables)]
-
 // 函数
 
 fn main()
@@ -21,9 +19,9 @@ fn main()
 
     println!("\n=== 闭包 ===");
     // 闭包
-    let closure = |num: isize| -> isize { num };
-    fn  add_one_v1   (x: u32) -> u32 { x + 1 }
-    let add_one_v2 = |x: u32| -> u32 { x + 1 };
+    let _closure = |num: isize| -> isize { num };
+    fn  _add_one_v1   (x: u32) -> u32 { x + 1 }
+    let _add_one_v2 = |x: u32| -> u32 { x + 1 };
     // v3 和 v4 版本必须被使用，编译器需要通过使用才能推断出函数类型
     let add_one_v3 = |x|             { x + 1 };
     let add_one_v4 = |x|               x + 1  ;

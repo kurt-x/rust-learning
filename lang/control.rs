@@ -97,7 +97,9 @@ fn main()
         // ..do sth
         return;
     };
-    let a = 1 else { nothing() }; // 可以编译，但是没有意义，编译器会发出警告
+
+    #[allow(irrefutable_let_patterns)]
+    let a = 1 else { return; }; // 可以编译，但是没有意义，编译器会发出警告
 
     struct Point<T> { x: T, y: T }
 
@@ -105,7 +107,7 @@ fn main()
     let Point { x: a, y: b } = p; // 模式匹配解构结构体
     let Point { x, y } = p; // 同创建一样，解构也可以简写
     let Point { x, .. } = p; // 省略部分
-    let Point { x: 10..20, y: z @ 10..20  } = p; // 指定范围匹配
+    let Point { x: 10..20, y: z @ 10..20  } = p else { return; }; // 指定范围匹配
 }
 
 impl UsState

@@ -57,7 +57,7 @@ path = "type.rs"
 
 [[bin]]
 name = "unsafe"
-path = "unsafe_code.rs"
+path = "unsafe.rs"
 
 [dependencies]
 module.workspace = true

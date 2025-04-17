@@ -2,9 +2,9 @@
 
 // 静态变量
 // 全局使用唯一地址
-static HELLO_WORLD: &str = "Hello World!";
+static _HELLO_WORLD: &str = "Hello World!";
 // 可以声明一个可变静态变量
-static mut COUNTER: u32 = 0;
+static mut _COUNTER: u32 = 0;
 // 访问或修改可变静态变量是不安全的，需要使用 unsafe
 
 fn main()
@@ -36,21 +36,21 @@ unsafe fn dangerous() {}
 // 调用外部函数
 unsafe extern "C"
 {
-    fn abs(input: i32) -> i32;
+    fn _abs(input: i32) -> i32;
 
     // 使用 safe 关键字可以指示一个外部函数是安全的，调用这个函数时就不需要 unsafe 块
-    safe fn safe_fun();
+    safe fn _safe_fun();
 }
 
 // 使用 extern 创建一个可供外部函数调用的接口
 #[unsafe(no_mangle)] // 指示编译器不要修改函数名称
 pub extern "C" fn ext_api() {}
 
-unsafe trait Foo { }
-unsafe impl Foo for i32 { }
+unsafe trait _Foo { }
+unsafe impl _Foo for i32 { }
 
 // 与 C 中的 union 相同
-union Value
+union _Value
 {
     int: i32,
     float: f32,
