@@ -29,6 +29,8 @@ fn main()
             println!("rp2: {}", *rp2);
             dangerous(); // 调用不安全函数
         }
+
+    say_hi();
 }
 
 unsafe fn dangerous() {}
@@ -40,6 +42,8 @@ unsafe extern "C"
 
     // 使用 safe 关键字可以指示一个外部函数是安全的，调用这个函数时就不需要 unsafe 块
     safe fn _safe_fun();
+
+    safe fn say_hi();
 }
 
 // 使用 extern 创建一个可供外部函数调用的接口
