@@ -21,10 +21,6 @@ edition = "2024"
 license = "Apache-2.0" # 指定一个 license
 license-file = "LICENSE.txt" # 或者指定一个 license 文件
 
-[workspace.dependencies]
-module = { path = "module" }
-trpl = "0.2"
-
 [profile.dev] # 配置 dev 环境
 opt-level = 0 # 优化等级，等级越高编译时间越慢
 

@@ -50,7 +50,6 @@ fn main()
     for e in arr { println!("for {e}"); }
 
     for (i, e) in arr.iter().enumerate() { println!("Element {i}: {e}"); }
-    
 
     for n in (1..4).rev() { println!("{n}!"); }
 

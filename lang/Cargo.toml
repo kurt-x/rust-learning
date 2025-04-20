@@ -60,9 +60,11 @@ path = "type.rs"
 name = "unsafe"
 path = "unsafe.rs"
 
-[dependencies]
-module.workspace = true
-trpl.workspace = true
+[dependencies.module]
+path = "../module"
+
+[dependencies.trpl]
+version = "0.2"
 
 [dependencies.macros]
 path = "../macros"
