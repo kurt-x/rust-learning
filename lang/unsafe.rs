@@ -41,8 +41,6 @@ unsafe extern "C"
     fn _abs(input: i32) -> i32;
 
     // 使用 safe 关键字可以指示一个外部函数是安全的，调用这个函数时就不需要 unsafe 块
-    safe fn _safe_fun();
-
     safe fn say_hi();
 }
 

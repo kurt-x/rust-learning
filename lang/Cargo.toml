@@ -41,10 +41,6 @@ name = "sptr"
 path = "smart_pointer.rs"
 
 [[bin]]
-name = "struct"
-path = "struct.rs"
-
-[[bin]]
 name = "sync"
 path = "sync.rs"
 
